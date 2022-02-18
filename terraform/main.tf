@@ -57,10 +57,12 @@ resource "google_pubsub_subscription" "echo" {
 
 resource "google_storage_bucket" "bucket" {
   name = "${var.project_name}-source-bucket"
+   location      = "US"
 }
 
 resource "google_storage_bucket" "archive" {
   name = "${var.project_name}-archive-bucket"
+   location      = "US"
 }
 
 
